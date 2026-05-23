@@ -3,7 +3,6 @@ services:
     name: crypto-app
     env: node
     plan: free
-    packageManager: pnpm@10.30.3
     buildCommand: pnpm install --frozen-lockfile && pnpm run build
     startCommand: pnpm run preview
     envVars:
