@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: crypto-app
+    name: crypto-app-frontend
     env: node
     plan: free
     buildCommand: pnpm install --frozen-lockfile && pnpm run build
@@ -8,3 +8,16 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
+  - type: web
+    name: crypto-app-backend
+    env: node
+    plan: free
+    buildCommand: cd backend && pnpm install --frozen-lockfile
+    startCommand: cd backend && node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        value: "<Your MongoDB URI here>"
+      - key: FRONTEND_URL
+        value: "<Your Frontend URL here>"
