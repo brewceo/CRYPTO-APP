@@ -4,7 +4,7 @@ services:
     env: node
     plan: free
     buildCommand: npm install --frozen-lockfile && npm run build
-    startCommand: npm run dev
+    startCommand: npm run preview
     envVars:
       - key: NODE_ENV
         value: production
