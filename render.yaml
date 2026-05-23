@@ -3,8 +3,8 @@ services:
     name: crypto-app
     env: node
     plan: free
-    buildCommand: npm install --frozen-lockfile && npm run build
-    startCommand: npm run preview
+    buildCommand: pnpm install --frozen-lockfile && pnpm run build
+    startCommand: pnpm run preview
     envVars:
       - key: NODE_ENV
         value: production
