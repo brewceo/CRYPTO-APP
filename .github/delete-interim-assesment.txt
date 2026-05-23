@@ -1,0 +1,1 @@
+This is a placeholder file to document the manual deletion of the interim-assesment/ directory. The directory was removed to resolve build script conflicts for Render deployment, as it was a duplicate of the root frontend.
